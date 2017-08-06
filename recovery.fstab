@@ -1,7 +1,8 @@
 /boot		emmc	/dev/block/bootdevice/by-name/boot
 /recovery	emmc	/dev/block/bootdevice/by-name/recovery	flags=backup=1
 /system		ext4	/dev/block/bootdevice/by-name/system
-/data		ext4	/dev/block/bootdevice/by-name/userdata	flags=encryptable=footer;length=-16384
+/system_image	emmc	/dev/block/bootdevice/by-name/system
+/data		ext4	/dev/block/bootdevice/by-name/userdata	flags=encryptable=footer;length=-16384;retainlayoutversion;
 /cache		ext4	/dev/block/bootdevice/by-name/cache
 # /misc is disabled because ORS commands to factory reset on boot key combo
 #/misc		emmc	/dev/block/bootdevice/by-name/misc
